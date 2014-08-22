@@ -1,10 +1,8 @@
 # npm-next
 
-Simply wraps the latest, possible unstable version of npm under a new
-command-line name for easier testing.
-
-Will update weekly with prerelease version of npm. Will always bump
-major.
+Wraps the latest unstable version of npm with different name so you can
+globally install it and test the unstable version alongside a globally
+installed and stable `npm`.
 
 ## Installation
 
@@ -14,13 +12,14 @@ npm install -g npm-next
 
 ## Usage
 
-`npm-next` behaves exactly like npm. This allows your existing npm
-installation to continue working alongside the latest testing version.
+`npm-next` behaves exactly like `npm`:
 
 ```
 > npm-next -v
-2.0.0-beta.0
-> npm-next install # etc
+2.0.0-beta.3
+> npm-next install
+> npm-next search
+# etc
 ```
 
 # License

@@ -1,16 +1,40 @@
 {
   "name": "npm-next",
-  "version": "1.0.0",
+  "version": "32.0.0",
   "description": "wraps the latest version of npm for testing",
   "main": "index.js",
-  "bin": "bin/index.js",
+  "bin": {
+    "npm-next": "bin/index.js"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "tape test.js",
+    "start": "npm test || npm run selfupdate",
+    "selfupdate": "npm install --save npm@next --cache-min=0 && npm run commit",
+    "commit": "export NPM_VERSION=$(npm info npm@next version --cache-min=Infinity); git add . && git commit -m \"Upgrade to npm@$NPM_VERSION\""
   },
   "author": "Tim Oxley <secoif@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "npm": "^2.0.0-beta.0",
-    "npm-which": "^1.0.1"
-  }
+    "npm": "next"
+  },
+  "devDependencies": {
+    "tape": "~2.14.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/timoxley/npm-next.git"
+  },
+  "bugs": {
+    "url": "https://github.com/timoxley/npm-next/issues"
+  },
+  "homepage": "https://github.com/timoxley/npm-next",
+  "keywords": [
+    "npm",
+    "beta",
+    "alpha",
+    "version",
+    "semver",
+    "testing",
+    "test"
+  ]
 }
