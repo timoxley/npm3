@@ -1,0 +1,16 @@
+{
+  "name": "npm-next",
+  "version": "1.0.0",
+  "description": "wraps the latest version of npm for testing",
+  "main": "index.js",
+  "bin": "bin/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tim Oxley <secoif@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "npm": "^2.0.0-beta.0",
+    "npm-which": "^1.0.1"
+  }
+}
