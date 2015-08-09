@@ -1,26 +1,31 @@
-# npm-next
+# npm3
 
-Wraps the latest unstable version of npm with different name so you can
-globally install it and test the unstable version alongside a globally
-installed and stable `npm`.
+Use npm v3 globally alongside whatever other version of `npm` you currently have installed.
 
-## Installation
+Wraps the 'next' version of npm v3 as an executable `npm3`.
 
+## Installation & Update
+
+Remember to run this semi-regularly to get the latest version of npm v3.
 ```
-npm install -g npm-next
+npm install -g npm3
 ```
 
 ## Usage
 
-`npm-next` behaves exactly like `npm`:
+The `npm3` executable behaves exactly like `npm`:
 
 ```
-> npm-next -v
-2.0.0-beta.3
-> npm-next install
-> npm-next search
+> npm3 -v
+3.2.2
+> npm3 install
+> npm3 search
 # etc
 ```
+
+## See Also
+
+* [npm-next](https://github.com/timoxley/npm-next)
 
 # License
 

@@ -1,33 +1,33 @@
 {
-  "name": "npm-next",
-  "version": "32.0.0",
-  "description": "wraps the latest version of npm for testing",
+  "name": "npm3",
+  "version": "1.0.0",
+  "description": "wraps npm v3 so you can run it alongside npm v2",
   "main": "index.js",
   "bin": {
-    "npm-next": "bin/index.js"
+    "npm3": "bin/index.js"
   },
   "scripts": {
     "test": "tape test.js",
     "start": "npm test || npm run selfupdate",
-    "selfupdate": "npm install --save npm@next --cache-min=0 && npm run commit",
-    "commit": "export NPM_VERSION=$(npm info npm@next version --cache-min=Infinity); git add . && git commit -m \"Upgrade to npm@$NPM_VERSION\""
+    "selfupdate": "npm install --save npm@3.0-next --cache-min=0 && npm run commit",
+    "commit": "export NPM_VERSION=$(npm info npm@3.0-next version --cache-min=Infinity); git add . && git commit -m \"Upgrade to npm@$NPM_VERSION\""
   },
   "author": "Tim Oxley <secoif@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "npm": "next"
+    "npm": "^3.2.2"
   },
   "devDependencies": {
     "tape": "~2.14.0"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/timoxley/npm-next.git"
+    "url": "git://github.com/timoxley/npm3.git"
   },
   "bugs": {
-    "url": "https://github.com/timoxley/npm-next/issues"
+    "url": "https://github.com/timoxley/npm3/issues"
   },
-  "homepage": "https://github.com/timoxley/npm-next",
+  "homepage": "https://github.com/timoxley/npm3",
   "keywords": [
     "npm",
     "beta",
