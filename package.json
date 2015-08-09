@@ -1,7 +1,7 @@
 {
   "name": "npm3",
-  "version": "1.0.0",
-  "description": "wraps npm v3 so you can run it alongside npm v2",
+  "version": "1.0.1",
+  "description": "Wraps npm v3 so you can run it alongside npm v2",
   "main": "index.js",
   "bin": {
     "npm3": "bin/index.js"
