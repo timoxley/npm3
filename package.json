@@ -9,13 +9,13 @@
   "scripts": {
     "test": "tape test.js",
     "start": "npm test || npm run selfupdate",
-    "selfupdate": "npm install --save npm@3.0-next --cache-min=0 && npm run commit",
-    "commit": "export NPM_VERSION=$(npm info npm@3.0-next version --cache-min=Infinity); git add . && git commit -m \"Upgrade to npm@$NPM_VERSION\""
+    "selfupdate": "npm install --cache-min=0 --save npm@$(npm info npm@^3.0.0 version --cache-min=Infinity | tail -n 1 | cut -d ' ' -f 2 | cut -c 2-6) && npm run commit",
+    "commit": "export NPM_VERSION=$(npm info npm@^3.0.0 version --cache-min=Infinity | tail -n 1 | cut -d ' ' -f 2 | cut -c 2-6); git add . && git commit -m \"Upgrade to npm@$NPM_VERSION\""
   },
   "author": "Tim Oxley <secoif@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "npm": "^3.2.2"
+    "npm": "^3.3.4"
   },
   "devDependencies": {
     "tape": "~4.0.3"
