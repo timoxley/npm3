@@ -1,6 +1,6 @@
 {
   "name": "npm3",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Wraps npm v3 so you can run it alongside npm v2",
   "main": "index.js",
   "bin": {
@@ -9,8 +9,8 @@
   "scripts": {
     "test": "tape test.js",
     "start": "npm test || npm run selfupdate",
-    "selfupdate": "npm install --cache-min=0 --save npm@$(npm info npm@^3.0.0 version --cache-min=Infinity | tail -n 1 | cut -d ' ' -f 2 | cut -c 2-6) && npm run commit",
-    "commit": "export NPM_VERSION=$(npm info npm@^3.0.0 version --cache-min=Infinity | tail -n 1 | cut -d ' ' -f 2 | cut -c 2-6); git add . && git commit -m \"Upgrade to npm@$NPM_VERSION\""
+    "selfupdate": "npm install --cache-min=0 --save npm@$(npm info npm@^3.0.0 version --cache-min=Infinity | tail -n 1 | cut -d ' ' -f 2 | cut -d \"'\" -f 2 && npm run commit",
+    "commit": "export NPM_VERSION=$(npm info npm@^3.0.0 version --cache-min=Infinity | tail -n 1 | cut -d ' ' -f 2 | cut -d \"'\" -f 2); git add . && git commit -m \"Upgrade to npm@$NPM_VERSION\""
   },
   "author": "Tim Oxley <secoif@gmail.com>",
   "license": "MIT",
