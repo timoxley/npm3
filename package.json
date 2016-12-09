@@ -13,10 +13,10 @@
   "author": "Tim Oxley <secoif@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "npm": "^3.3.4"
+    "npm": "^3.10.10"
   },
   "devDependencies": {
-    "tape": "~4.0.3"
+    "tape": "~4.6.3"
   },
   "repository": {
     "type": "git",
