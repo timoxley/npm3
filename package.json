@@ -8,9 +8,7 @@
   },
   "scripts": {
     "test": "tape test.js",
-    "start": "npm test || npm run selfupdate",
-    "selfupdate": "npm install --cache-min=0 --save npm@$(npm info npm@^3.0.0 version --cache-min=Infinity | tail -n 1 | cut -d ' ' -f 2 | cut -d \"'\" -f 2 && npm run commit",
-    "commit": "export NPM_VERSION=$(npm info npm@^3.0.0 version --cache-min=Infinity | tail -n 1 | cut -d ' ' -f 2 | cut -d \"'\" -f 2); git add . && git commit -m \"Upgrade to npm@$NPM_VERSION\""
+    "start": "npm install --cache-min=0 npm@^3.0.0 && npm test"
   },
   "author": "Tim Oxley <secoif@gmail.com>",
   "license": "MIT",
