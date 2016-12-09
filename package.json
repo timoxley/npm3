@@ -8,6 +8,8 @@
   },
   "scripts": {
     "test": "tape test.js",
+    "test": "npm run lint && tape test.js",
+    "lint": "standard",
     "start": "npm install --cache-min=0 npm@^3.0.0 && npm test"
   },
   "author": "Tim Oxley <secoif@gmail.com>",
@@ -16,6 +18,7 @@
     "npm": "^3.10.10"
   },
   "devDependencies": {
+    "standard": "^8.6.0",
     "tape": "~4.6.3"
   },
   "repository": {
